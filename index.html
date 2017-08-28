@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	
+	<meta name="keywords" content="music, game, guess, fun, kids">
+	<meta name="description" content="How little time do you need to guess all the songs AND their corresponding movies?  WARNING: this game is NOT easy!">
+	<meta name="author" content="Wilson Klodt Wong & Maren Sigson">
+	<meta property="og:title" content="Guess it!">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="assets/character_image/middleImage.jpg">
+	<meta property="og:site_name" content="Guess it!">
+	<meta property="og:description" content="How little time do you need to guess all the songs AND their corresponding movies?  WARNING: this game is NOT easy!">
+
+	<title>Guess It!</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<!-- Original design and code by Wilson Klodt Wong and Maren Sigson -->
+
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="container welcome_container">
+				<div class="welcome">
+					<h2>Welcome to</h2>
+					<h1>Guess It!</h1>
+					<div class="intro">
+						<div class="intro1">
+							<p>The concept is simple.  It's just like "Name That Tune":</p>
+							<p>Choose a time duration to listen to the song.</p>
+							<p>Enter the name of the song title <strong> AND </strong> movie!</p>
+							<p><strong>Don't forget your 'The's and make sure to spell out the WHOLE title!</strong></p>
+							<p>How many can you name?</p>
+						</div>
+						<div class="intro2">
+							<p class="introScore">Scoring:</p>
+							<ul>
+								<li>1 sec - 5 points</li>
+								<li>5 sec - 3 points</li>
+								<li>10 sec - 1 point</li>
+							</ul>
+							<p>You have 3 tries.  After that, you score 0 points and move onto the next question.</p>
+						</div>	
+					</div>
+					<a href="#question1"><button class="lets_play">Let's Play!</button></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section id="question1">
+			<div class ="wrapper">
+				<div class=" container game_container">
+					<div class="question">
+						<div class="question_number ">
+							<h3>Question 1</h3>
+						</div>
+						<div class="playing_field">
+							<div class="character_img">
+								<img src="assets/character_image/confused_character1.jpg" alt="confused genie">
+								<div class="question_result">
+									<p class="correct">Correct!</p>
+									<p class="try_again">Try Again!</p>
+									<p class="too_many_tries">Too Many Tries...</p>
+									<a href="#question2"><button class="to_question2">Next Question</button></a>
+								</div>
+							</div>
+							<div class="clips_inputs">
+								<p>Pick your time duration!</p>
+								<div class="time_frame">
+									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec (5 pts)</button>
+									<button class = "music five_sec" data-duration="5000" data-time="5"> 5 sec (3 pts)</button>
+									<button class = "music ten_sec" data-duration="10000" data-time="10">10 sec (1 pt)</button>
+									<audio class="audio_display0">
+										<source src="assets/audio/LionKing_circleOfLife_tenSeconds.mp3" type="audio/mpeg">
+									</audio>
+								</div>
+								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<form data-form="1" action="submit" class="form_1">
+									<input type="text" class="song_name" placeholder="Song Name" required>
+									<p>from</p>
+									<input type="text" class="movie_name" placeholder="Movie" required>
+									<button class="submit" type="submit">Submit</button>
+								</form>
+							</div>
+						</div>
+						<p class="copyright">&copy; Disney</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="question2">
+			<div class="wrapper">
+				<div class="container">
+					<div class="question">
+						<div class="question_number ">
+							<h3>Question 2</h3>
+						</div>
+						<div class="playing_field">
+							<div class="character_img">
+								<img src="assets/character_image/confused_character2.jpg" alt="confused warthog">
+								<div class="question_result">
+									<p class="correct">Correct!</p>
+									<p class="try_again">Try Again!</p>
+									<p class="too_many_tries">Too Many Tries...</p>
+									<a href="#question3"><button class="to_question3">Next Question</button></a>
+								</div>
+							</div>
+							<div class="clips_inputs">
+								<p>Pick your time duration!</p>
+								<div class="time_frame">
+									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec (5 pts)</button>
+									<button class = "music five_sec" data-duration="5000" data-time="5"> 5 sec (3 pts)</button>
+									<button class = "music ten_sec" data-duration="10000" data-time="10">10 sec (1 pt)</button>
+									<audio class="audio_display1">
+										<source src="assets/audio/GoofyMovie _StandOut_tenSeconds.mp3" type="audio/mpeg">
+									</audio>
+								</div>
+								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<form data-form="2" action="submit" class="form_2">
+									<input type="text" class="song_name" placeholder="Song Name" required>
+									<p>from</p>
+									<input type="text" class="movie_name" placeholder="Movie" required>
+									<button class="submit" type="submit">Submit</button>
+								</form>
+							</div>
+						</div>
+						<p class="copyright">&copy; Disney</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="question3">
+			<div class="wrapper">
+				<div class="container">
+					<div class="question">
+						<div class="question_number ">
+							<h3>Question 3</h3>
+						</div>
+						<div class="playing_field">
+							<div class="character_img">
+								<img src="assets/character_image/confused_character3.jpg" alt="confused fish">
+								<div class="question_result">
+									<p class="correct">Correct!</p>
+									<p class="try_again">Try Again!</p>
+									<p class="too_many_tries">Too Many Tries...</p>
+									<a href="#question4"><button class="to_question4">Next Question</button></a>
+								</div>
+							</div>
+							<div class="clips_inputs">
+								<p>Pick your time duration!</p>
+								<div class="time_frame">
+									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec (5 pts)</button>
+									<button class = "music five_sec" data-duration="5000" data-time="5"> 5 sec (3 pts)</button>
+									<button class = "music ten_sec" data-duration="10000" data-time="10">10 sec (1 pt)</button>
+									<audio class="audio_display2">
+										<source src="assets/audio/Pocahontas_Savages_tenSecond.mp3" type="audio/mpeg">
+									</audio>
+								</div>
+								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<form data-form="3" action="submit" class="form_3">
+									<input type="text" class="song_name" placeholder="Song Name" required>
+									<p>from</p>
+									<input type="text" class="movie_name" placeholder="Movie" required>
+									<button class="submit" type="submit">Submit</button>
+								</form>
+							</div>
+						</div>
+						<p class="copyright">&copy; Disney</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="question4">
+			<div class="wrapper">
+				<div class="container">
+					<div class="question">
+						<div class="question_number ">
+							<h3>Question 4</h3>
+						</div>
+						<div class="playing_field">
+							<div class="character_img">
+								<img src="assets/character_image/confused_character4.jpg" alt="confused thief">
+								<div class="question_result">
+									<p class="correct">Correct!</p>
+									<p class="try_again">Try Again!</p>
+									<p class="too_many_tries">Too Many Tries...</p>
+									<a href="#question5"><button class="to_question5">Next Question</button></a>
+								</div>
+							</div>
+							<div class="clips_inputs">
+								<p>Pick your time duration!</p>
+								<div class="time_frame">
+									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec (5 pts)</button>
+									<button class = "music five_sec" data-duration="5000" data-time="5"> 5 sec (3 pts)</button>
+									<button class = "music ten_sec" data-duration="10000" data-time="10">10 sec (1 pt)</button>
+									<audio class="audio_display3">
+										<source src="assets/audio/Aladdin_friendLikeMe_tenSeconds.mp3" type="audio/mpeg">
+									</audio>
+								</div>
+								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<form data-form="4" action="submit" class="form_4">
+									<input type="text" class="song_name" placeholder="Song Name" required>
+									<p>from</p>
+									<input type="text" class="movie_name" placeholder="Movie" required>
+									<button class="submit" type="submit">Submit</button>
+								</form>
+							</div>
+						</div>
+						<p class="copyright">&copy; Disney</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="question5">
+			<div class="wrapper">
+				<div class="container">
+					<div class="question">
+						<div class="question_number ">
+							<h3>Question 5</h3>
+						</div>
+						<div class="playing_field">
+							<div class="character_img">
+								<img src="assets/character_image/confused_character5.jpg" alt="confused native">
+								<div class="question_result">
+									<p class="correct">Correct!</p>
+									<p class="try_again">Try Again!</p>
+									<p class="too_many_tries">Too Many Tries...</p>
+									<a href="#final_results"><button class="to_final_results">Get Your RESULTS!</button></a>
+								</div>
+							</div>
+							<div class="clips_inputs">
+								<p>Pick your time duration!</p>
+								<div class="time_frame">
+									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec (5 pts)</button>
+									<button class = "music five_sec" data-duration="5000" data-time="5"> 5 sec (3 pts)</button>
+									<button class = "music ten_sec" data-duration="10000" data-time="10">10 sec (1 pt)</button>
+									<audio class="audio_display4">
+										<source src="assets/audio/Frozen_firstTime_tenSeconds.mp3" type="audio/mpeg">
+									</audio>
+								</div>
+								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<form data-form="5" action="submit" class="form_5">
+									<input type="text" class="song_name" placeholder="Song Name" required>
+									<p>from</p>
+									<input type="text" class="movie_name" placeholder="Movie" required>
+									<button class="submit" type="submit">Submit</button>
+								</form>
+							</div>
+						</div>
+						<p class="copyright">&copy; Disney</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="final_results">
+	    	<div id="top_result">
+	            <div class="wrapper">
+	                <div class="container">
+	                    <div class="question">
+	                        <div class="question_number ">
+
+	                            <h3>Congratulations!</h3>
+	                        </div>
+	                        <div class="playing_field">
+	                            <div class="character_img">
+	                                <img src="assets/character_image/winImage.jpg" alt="pillow man with trophy">
+	                            </div>
+	                            <div class="top_text">
+	                            	<div class="score"></div>
+	                                <h2>You're Ah-Mazing!</h2>
+	                                <p>You know your stuff.. Walt would be so proud!</p>
+	                                <a href="#answers"><button class="to_answers">Correct Answers</button></a>
+	                            </div>
+	                        </div>
+	                        <p class="copyright">&copy; Disney</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+            <div id="middle_result">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="question">
+                            <div class="question_number ">
+                                <h3>Not bad!</h3>
+                            </div>
+                            <div class="playing_field">
+                                <div class="character_img">
+                                    <img src="assets/character_image/middleImage.jpg" alt="princesses making faces">
+                                </div>
+                                <div class="middle_text">
+                                	<div class="score"></div>
+                                    <h2>So close!</h2>
+                                    <p>Not bad but maybe you should watch more videos.</p>
+                                    <p>Play again to get a perfect score.</p>
+                                    <a href="#answers"><button class="to_answers">Correct Answers</button></a>
+                                </div>
+                            </div>
+                            <p class="copyright">&copy; Disney</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom_result">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="question">
+                            <div class="question_number ">
+                                <h3>Oh no!</h3>
+                            </div>
+                            <div class="playing_field">
+                                <div class="character_img">
+                                    <img src="assets/character_image/loseImage.jpg" alt="sad blue girl">
+                                </div>
+                                <div class="bottom_text">
+	                            	<div class="score"></div>
+                                    <h2>Better luck next time!</h2>
+                                    <p>Play again for more practice.</p>
+                                    <a href="#answers"><button class="to_answers">Correct Answers</button></a>
+                                </div>
+                            </div>
+                            <p class="copyright">&copy; Disney</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="answers">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="question">
+                        <div class="question_number ">
+                            <h3>Answer Key</h3>
+                        </div>
+                        <div class="answers_and_img">
+	                    	<div class="character_img">
+	                    		<img src="assets/character_image/answerkey.jpg" alt="mickey mouse as phantom of the opera">
+	                    	</div>
+				        	<ul class="correct">
+				        		<li>'Circle of Life' from 'The Lion King'</li>
+				        		<li>'Stand Out' from 'A Goofy Movie'</li>
+				        		<li>'Savages' from 'Pocahontas'</li>
+				        		<li>'Friend Like Me' from 'Aladdin'</li>
+				        		<li>'For the First Time in Forever' from 'Frozen'</li>
+				        	</ul>
+			        	</div>
+                        <p class="copyright">&copy; Disney</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="scripts/script.js"></script>
+</body>
+</html>
+
+
