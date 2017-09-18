@@ -24,7 +24,7 @@
 			correct.show();
 			nextQuestionButton.show();
 			game.userLevel = game.userLevel + 1;
-			$(`#question${number} .question_result`).css('background-color', 'rgba(31, 127, 33, 0.7)')
+			$(`#question${number} .question_result`).css('background-color', 'rgba(42, 182, 153, 0.7)')
 			game.totalScore = game.totalScore + game.questionScore;
 			console.log("Total Score", game.totalScore);
 		};
@@ -33,13 +33,13 @@
 			nextQuestionButton.show();
 			tryAgain.hide();
 			game.userLevel = game.userLevel + 1;
-			$(`#question${number} .question_result`).css('background-color', 'rgba(208, 28, 5, 0.7)')
+			$(`#question${number} .question_result`).css('background-color', 'rgba(202, 52, 55, 0.7)')
 			game.questionScore = 0;
 		};
 		game.wrongAboveClickCount = function (tryAgain, nextQuestionButton, number) {
 			tryAgain.show();
 			nextQuestionButton.hide();
-			$(`#question${number} .question_result`).css('background-color', 'rgba(253, 255, 0, 0.7)')
+			$(`#question${number} .question_result`).css('background-color', 'rgba(252, 199, 124, 0.7)')
 			var fade_out = function() {
 				$(`#question${number} .question_result`).fadeOut();
 			}

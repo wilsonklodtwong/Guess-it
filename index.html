@@ -17,7 +17,7 @@
 
 	<title>Guess It!</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Paytone+One" rel="stylesheet">
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -37,26 +37,18 @@
 				<div class="welcome">
 					<h2>Welcome to</h2>
 					<h1>Guess It!</h1>
-					<div class="intro">
-						<div class="intro1">
-							<p>The concept is simple.  It's just like "Name That Tune":</p>
-							<p>Choose a time duration to listen to the song.</p>
-							<p>Enter the name of the song title <strong> AND </strong> movie!</p>
-							<p><strong>Don't forget your 'The's and make sure to spell out the WHOLE title!</strong></p>
-							<p>How many can you name?</p>
-						</div>
-						<div class="intro2">
-							<p class="introScore">Scoring:</p>
-							<ul>
-								<li>1 sec - 5 points</li>
-								<li>5 sec - 3 points</li>
-								<li>10 sec - 1 point</li>
-							</ul>
-							<p>You have 3 tries.  After that, you score 0 points and move onto the next question.</p>
-						</div>	
+					<h2>How many can you name?</h2>
+					<div class="intro1">
+						<p>The concept is simple.</p>
+						<p>Choose a time duration to listen to the song.</p>
+						<p>Spell out the WHOLE title, and don't forget your "The's!"</p>
 					</div>
-					<a href="#question1"><button class="lets_play">Let's Play!</button></a>
+					<div class="introScore">
+						<p>The less seconds you pick, the higher you score!</p>
+						<p>Can you guess the song title AND movie in 3 tries or less?</p>
+					</div>	
 				</div>
+				<a href="#question1"><button class="lets_play">Let's Play!</button></a>
 			</div>
 		</div>
 	</header>
@@ -81,23 +73,22 @@
 							<div class="clips_inputs">
 								<p>Pick your time duration!</p>
 								<div class="time_frame">
-									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec (5 pts)</button>
+									<button class = "music one_sec" data-duration="1000" data-time="1"">1 sec <br/> (5 pts)</button>
 									<button class = "music five_sec" data-duration="5000" data-time="5"> 5 sec (3 pts)</button>
 									<button class = "music ten_sec" data-duration="10000" data-time="10">10 sec (1 pt)</button>
 									<audio class="audio_display0">
 										<source src="assets/audio/LionKing_circleOfLife_tenSeconds.mp3" type="audio/mpeg">
 									</audio>
 								</div>
-								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<p>Type in your guesses:</p>
 								<form data-form="1" action="submit" class="form_1">
 									<input type="text" class="song_name" placeholder="Song Name" required>
-									<p>from</p>
+									<p class="from">from</p>
 									<input type="text" class="movie_name" placeholder="Movie" required>
-									<button class="submit" type="submit">Submit</button>
+									<button class="submit" type="submit">Guess It!</button>
 								</form>
 							</div>
 						</div>
-						<p class="copyright">&copy; Disney</p>
 					</div>
 				</div>
 			</div>
@@ -129,16 +120,16 @@
 										<source src="assets/audio/GoofyMovie _StandOut_tenSeconds.mp3" type="audio/mpeg">
 									</audio>
 								</div>
-								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<p>Type in your guesses:</p>
 								<form data-form="2" action="submit" class="form_2">
 									<input type="text" class="song_name" placeholder="Song Name" required>
-									<p>from</p>
+									<p class="from">from</p>
 									<input type="text" class="movie_name" placeholder="Movie" required>
 									<button class="submit" type="submit">Submit</button>
 								</form>
 							</div>
 						</div>
-						<p class="copyright">&copy; Disney</p>
+			
 					</div>
 				</div>
 			</div>
@@ -170,16 +161,15 @@
 										<source src="assets/audio/Pocahontas_Savages_tenSecond.mp3" type="audio/mpeg">
 									</audio>
 								</div>
-								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<p>Type in your guesses:</p>
 								<form data-form="3" action="submit" class="form_3">
 									<input type="text" class="song_name" placeholder="Song Name" required>
-									<p>from</p>
+									<p class="from">from</p>
 									<input type="text" class="movie_name" placeholder="Movie" required>
 									<button class="submit" type="submit">Submit</button>
 								</form>
 							</div>
 						</div>
-						<p class="copyright">&copy; Disney</p>
 					</div>
 				</div>
 			</div>
@@ -211,16 +201,15 @@
 										<source src="assets/audio/Aladdin_friendLikeMe_tenSeconds.mp3" type="audio/mpeg">
 									</audio>
 								</div>
-								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<p>Type in your guesses:</p>
 								<form data-form="4" action="submit" class="form_4">
 									<input type="text" class="song_name" placeholder="Song Name" required>
-									<p>from</p>
+									<p class="from">from</p>
 									<input type="text" class="movie_name" placeholder="Movie" required>
 									<button class="submit" type="submit">Submit</button>
 								</form>
 							</div>
 						</div>
-						<p class="copyright">&copy; Disney</p>
 					</div>
 				</div>
 			</div>
@@ -252,16 +241,15 @@
 										<source src="assets/audio/Frozen_firstTime_tenSeconds.mp3" type="audio/mpeg">
 									</audio>
 								</div>
-								<p>Type in your guess for Song Name <strong>AND</strong> Movie</p>
+								<p>Type in your guesses:</p>
 								<form data-form="5" action="submit" class="form_5">
 									<input type="text" class="song_name" placeholder="Song Name" required>
-									<p>from</p>
+									<p class="from">from</p>
 									<input type="text" class="movie_name" placeholder="Movie" required>
 									<button class="submit" type="submit">Submit</button>
 								</form>
 							</div>
 						</div>
-						<p class="copyright">&copy; Disney</p>
 					</div>
 				</div>
 			</div>
@@ -286,7 +274,6 @@
 	                                <a href="#answers"><button class="to_answers">Correct Answers</button></a>
 	                            </div>
 	                        </div>
-	                        <p class="copyright">&copy; Disney</p>
 	                    </div>
 	                </div>
 	            </div>
@@ -310,7 +297,6 @@
                                     <a href="#answers"><button class="to_answers">Correct Answers</button></a>
                                 </div>
                             </div>
-                            <p class="copyright">&copy; Disney</p>
                         </div>
                     </div>
                 </div>
@@ -333,36 +319,35 @@
                                     <a href="#answers"><button class="to_answers">Correct Answers</button></a>
                                 </div>
                             </div>
-                            <p class="copyright">&copy; Disney</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="answers">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="question">
-                        <div class="question_number ">
-                            <h3>Answer Key</h3>
-                        </div>
-                        <div class="answers_and_img">
-	                    	<div class="character_img">
-	                    		<img src="assets/character_image/answerkey.jpg" alt="mickey mouse as phantom of the opera">
-	                    	</div>
-				        	<ul class="correct">
-				        		<li>'Circle of Life' from 'The Lion King'</li>
-				        		<li>'Stand Out' from 'A Goofy Movie'</li>
-				        		<li>'Savages' from 'Pocahontas'</li>
-				        		<li>'Friend Like Me' from 'Aladdin'</li>
-				        		<li>'For the First Time in Forever' from 'Frozen'</li>
-				        	</ul>
-			        	</div>
-                        <p class="copyright">&copy; Disney</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+			<section id="answers">
+				<div class="wrapper">
+					<div class="container">
+						<div class="question">
+							<div class="question_number ">
+								<h3>Answer Key</h3>
+							</div>
+							<div class="answers_and_img">
+								<div class="character_img">
+									<img src="assets/character_image/answerkey.jpg" alt="mickey mouse as phantom of the opera">
+								</div>
+								<ul class="correct">
+									<li>'Circle of Life' from 'The Lion King'</li>
+									<li>'Stand Out' from 'A Goofy Movie'</li>
+									<li>'Savages' from 'Pocahontas'</li>
+									<li>'Friend Like Me' from 'Aladdin'</li>
+									<li>'For the First Time in Forever' from 'Frozen'</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<p class="copyright">Developed by Maren Sigson &amp Wilson Klodt Wong</p>
 	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="scripts/script.js"></script>

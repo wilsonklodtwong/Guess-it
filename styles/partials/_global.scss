@@ -1,5 +1,8 @@
 body {
-	font-family: 'Playfair Display', serif;
+	font-family: 'EB Garamond', serif;
+	font-family: 'Paytone One', sans-serif;
+	background-color: #16134A;
+	height: 100vh;
 }
 
 .wrapper {
@@ -21,30 +24,42 @@ audio {
 }
 
 h1 {
-	@include fontSize(20);
-	margin: 5px 0;
+	color: #fff;
+	@include fontSize(50);
+	line-height: 60px;
+	margin-bottom: 0;
+	margin-top: 10px;
 }
 
 h2 {
-	@include fontSize(15);
-	margin: 0 auto;
+	color: #fff;
+	font-family: 'EB Garamond', serif;
+	@include fontSize(16);
+	margin-bottom: 0;
 }
 
 h3 {
-	color: $welcomeColor;
-	margin-left: 5.5%;
+	color: white;
+	width: 100%;
+	text-align: center;
+	@include fontSize(40);
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 p {
-	@include fontSize(10);
+	color: #fff;
+	font-family: 'EB Garamond', serif;
+	margin: 0 auto;
+	line-height: 15px;
+	@include fontSize(13);
+}
+.introScore p {
+	font-family: 'Paytone One', sans-serif;
 }
 
 .clips_inputs p {
 	text-align: center;
-}
-
-main, header {
-	background-color: Peachpuff;
 }
 
 header {
@@ -61,7 +76,7 @@ main {
 }
 
 section {
-	padding: 10% 0%;
+	min-height: 100vh;
 	display: flex;
 	@include respond-to(tablet) {
 	}
@@ -74,11 +89,24 @@ form {
 }
 
 form input {
-	padding: 5px 10px;
+	padding: 10px 10px;
 	width: 40%;
 	text-align: center;
-	border: 2px solid $welcomeColor;
+	border: 5px solid #6A70B3;
+	border-radius: 12px;
+	background: none;
+	color: #2AB699;
+	&::placeholder {
+		color: #6A70B3;
+	}
 }
+
+// from Rob Fletcher at https://stackoverflow.com/questions/9707021/how-do-i-auto-hide-placeholder-text-upon-focus-using-css-or-jquery
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 *:focus {
 	outline: none;
@@ -92,12 +120,29 @@ form input {
 
 button {
 	padding: 10px 15px;
-	border: 2px solid $welcomeColor;
-	background: Peachpuff;
-	color: $welcomeColor;
+	border: 5px solid #6A70B3;
+	background: none;
+	color: #2AB699;
 	font-weight: 700;
-	border-radius: 5px;
+	border-radius: 12px;
 	@include respond-to(tablet) {
 		padding: 5px - 10px;
 	}
+	&:hover {
+		background: #6A70B3;
+		color: white;
+	}
+}
+
+.music {
+	width: 30%;
+	padding: 10px 25px;
+	&:hover {
+		background-color: #6A70B3;
+		color: white;
+	}
+}
+
+.from {
+	margin-top: 15px;
 }
