@@ -232,6 +232,12 @@ header .container {
 .score {
 	text-align: center;
 }
+.score h2 {
+	margin: 10px 0;
+}
+.score p {
+	margin-bottom: 15px;
+}
 
 #answers {
 	display: none;
